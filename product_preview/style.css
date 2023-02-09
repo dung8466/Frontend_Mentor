@@ -1,0 +1,112 @@
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --dark-blue: hsl(212, 21%, 14%);
+  --grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  --ff-reg:  "Montserrat", sans-serif;
+  --ff-acc:  "Fraunces", serif;
+}
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+body{
+    font-family: var(--ff-reg);
+    font-weight: 500;
+    color: var(--grayish-blue);
+    font-style: 0.875rem;
+    background-color: var(--cream);
+    display: grid;
+    place-content: center;
+    margin: 1rem;
+}
+.price-group{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.product{
+  background-color: var(--white);
+  border-radius: .5rem;
+  overflow: hidden;
+  display: grid;
+  max-width: 600px;
+}
+.product__content{
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.product__category{
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--grayish-blue);
+}
+.product__name{
+  font-style: 2rem;
+  font-family: var(--ff-acc);
+  color: var(--dark-blue);
+  font-weight: 700;
+  line-height: 1;
+}
+.product__price{
+  font-family: var(--ff-acc);
+  font-size: 2rem;
+  color: var(--dark-cyan);
+  font-weight: 700;
+}
+button{
+  display: inline-flex;
+  gap: .5rem;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  padding: .75em 1.5em;
+  border-radius: .5rem;
+  cursor: pointer;
+  background-color: var(--dark-cyan);
+  color: var(--white);
+}
+button:is(:hover, :focus){
+  background-color: hsl(158, 36%, 17%);
+}
+button[data-icon="cart"]::before{
+  content: "";
+  height: 16px;
+  width: 15px;
+  background-image: url('images/icon-cart.svg');
+}
+
+@media (min-width: 600px){
+  .product{
+    grid-template-columns: 1fr 1fr;
+  }
+}
