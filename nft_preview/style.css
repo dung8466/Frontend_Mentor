@@ -1,0 +1,135 @@
+/* css reset*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+
+:root{
+  --ff-reg: 'Outfit', sans-serif;
+
+  --clr-primary-1: hsl(215, 51%, 70%);
+  --clr-primary-2: hsl(178, 100%, 50%);
+
+  --clr-neutral-1: hsl(217, 54%, 11%);
+  --clr-neutral-2: hsl(216, 50%, 16%);
+  --clr-neutral-3: hsl(215, 32%, 27%);
+  --clr-neutral-4: hsl(0, 0%, 100%);
+
+  --fw-bold: 600;
+  --fw-reg: 400;
+  --fw-light: 300;
+}
+.flex-group{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body{
+  font-family: var(--ff-reg);
+  font-weight: var(--fw-reg);
+  background-color: var(--clr-neutral-1);
+  color: var(--clr-primary-1);
+  font-style: 18px;
+  display: grid;
+  place-content: center; 
+}
+hr{
+  border-color: var(--clr-neutral-3);
+  width: 88%;
+  margin: auto; 
+}
+.container{
+  background-color: var(--clr-neutral-2);
+  max-width: 340px;
+  overflow: hidden;
+  border-radius: 1rem;
+  display: grid;
+}
+picture{
+  margin: 1.5rem;
+  position: relative;
+}
+.imgOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 255, 247, .4);
+  display: none;
+  border-radius: 0.5rem;
+}
+.imgOverlay img{
+  margin: 1.5rem;
+  object-fit: scale-down;
+}
+img{
+  border-radius: 0.5rem;
+}
+picture:hover{
+  cursor: pointer;
+}
+picture:hover .imgOverlay{
+  display: flex;
+}
+.nft-description{
+  margin: 1.5rem;
+  margin-top: -0.2rem;
+  display: grid;
+  gap: 0.5rem;
+}
+.nft-name{
+  font-size: 22px;
+  color: var(--clr-neutral-4);
+  font-weight: var(--fw-bold);
+}
+.nft-name:hover, span:hover{
+  color: var(--clr-primary-2);
+}
+.nft-value, .discount{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  margin-bottom: -0.8rem;
+}
+.creator{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.creator picture{
+  width: 10%;
+  border-radius: 100%;
+  border: 1px solid var(--clr-neutral-4);
+}
+.nft-value{
+  color: var(--clr-primary-2);
+}
+span{
+  color: var(--clr-neutral-4);
+}
