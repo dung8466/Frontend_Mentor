@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root{
+  --clr-primary-1: hsl(185, 75%, 39%);
+  --clr-primary-2: hsl(229, 23%, 23%);
+  --clr-primary-3: hsl(227, 10%, 46%);
+
+  --clr-neutral: hsl(0, 0%, 59%);
+
+  --fs-reg: 1.125rem;
+
+  --ff-reg: 'Kumbh Sans', sans-serif;
+
+  --fw-reg: 400;
+  --fw-bold: 700;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+
+body{
+ font-family: var(--ff-reg);
+ font-size: var(--fs-reg);
+ font-weight: var(--fw-reg);
+ color: var(--clr-primary-2);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: var(--clr-primary-1);
+ background-image: url("images/bg-pattern-top.svg"), url("images/bg-pattern-bottom.svg");
+ background-repeat: no-repeat no-repeat;
+ background-position: right 48vw bottom 40vh, left 45vw top 44vh;
+}
+.wrapper{
+  max-width: 26.25rem;
+  background-color: #FFF;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 1rem;
+}
+.container{
+  text-align: center;
+  margin: 0 auto;
+  display: grid;
+  justify-items: center;
+}
+.profile-des{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile-des img{
+  border-radius: 50%;
+  margin-top: -3.25rem;
+  margin-bottom: 1.25rem;
+  border: 4px solid #fff;
+}
+.profile-name{
+  color: var(--clr-primary-2);
+  font-weight: var(--fw-bold);
+}
+.profile-social{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px 50px;
+  margin-top: 30px;
+  border-top: 1px solid var(--clr-primary-3);
+}
+.social-num{
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary-2);
+}
+span, .profile-place, .social-status {
+  color: var(--clr-primary-3);
+}
+
